@@ -19,3 +19,8 @@ export async function middleware(req) {
     }
 
 }
+
+// Fix for trailing slash issue with Next 12.x middleware
+export const config = {
+    matcher: '/',
+ };
