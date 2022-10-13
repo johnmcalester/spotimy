@@ -1,10 +1,11 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Sidebar from '../components/Sidebar'
-import Center from '../components/Center'
-import { getSession } from 'next-auth/react'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import Sidebar from '../components/Sidebar';
+import Center from '../components/Center';
+import Player from '../components/Player';
+import { getSession } from 'next-auth/react';
 
 const Home: NextPage = () => {
   return (
@@ -14,9 +15,11 @@ const Home: NextPage = () => {
         <Center />
       </main>
 
-      <div>{/* Player */}</div>
+      <div className="sticky bottom-0">
+        <Player />
+      </div>
     </div>
-  )
+  );
 }
 
 export default Home

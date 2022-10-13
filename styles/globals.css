@@ -28,3 +28,9 @@ a {
     background: black;
   }
 }
+
+@layer components {
+  .button {
+    @apply h-5 w-5 cursor-pointer hover:scale-125 transition transform duration-100 ease-out
+  }
+}
