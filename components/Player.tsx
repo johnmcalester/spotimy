@@ -78,17 +78,16 @@ function Player() {
     )
 
     return (
-        <div className="h-24 bg-gradient-to-b from-black to-gray-900 grid grid-cols-3 text-xs md:text-base px-2 md:px-8">
-            <div className="flex items-center space-x-4">
-                <div className="hidden md:inline h-10 w-10">
-                    <Image 
-                    src={songInfo?.album.images?.[0]?.url}
-                    alt=""
-                    width={50}
-                    height={50}
-                    />
-                </div>
-                <div className="">
+        <div className="flex h-24 bg-gradient-to-b from-black to-gray-900 text-xs md:text-base px-2 md:px-8">
+            <div className="flex flex-cols-4 items-center space-x-10">
+                <Image 
+                className="hidden md:inline h-10 w-10"
+                src={songInfo?.album.images?.[0]?.url}
+                alt=""
+                width={50}
+                height={50}
+                />
+                <div>
                     <h3>{songInfo?.name}</h3>
                     <p>{songInfo?.artists?.[0]?.name}</p>
                 </div>
