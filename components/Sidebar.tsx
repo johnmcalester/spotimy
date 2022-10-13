@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import HomeIcon from '@heroicons/react/24/outline/HomeIcon';
-import MagnifyingGlassIcon from '@heroicons/react/24/outline/MagnifyingGlassIcon';
-import BuildingLibraryIcon from '@heroicons/react/24/outline/BuildingLibraryIcon';
-import PlusCircleIcon from '@heroicons/react/24/outline/PlusCircleIcon';
-import HeartIcon from '@heroicons/react/24/outline/HeartIcon';
-import RssIcon from '@heroicons/react/24/outline/RssIcon';
+import 
+  { 
+    MagnifyingGlassIcon,
+    BuildingLibraryIcon,
+    PlusCircleIcon,
+    RssIcon,
+  } from '@heroicons/react/24/outline';
+import 
+  { 
+    HeartIcon,
+  } from '@heroicons/react/24/solid';
 import { signOut, useSession } from 'next-auth/react';
 import { useRecoilState } from 'recoil';
 import { playlistIdState } from '../atoms/playlistAtom';
@@ -47,11 +53,11 @@ function Sidebar() {
           <p>Add Playlist</p>
         </button>
         <button className="flex items-center space-x-2 hover:text-white">
-          <HeartIcon className="w-5 h-5" />
+          <HeartIcon className="w-5 h-5 text-blue-500" />
           <p>Like</p>
         </button>
         <button className="flex items-center space-x-2 hover:text-white">
-          <RssIcon className="w-5 h-5" />
+          <RssIcon className="w-5 h-5 text-green-500" />
           <p>Episodes</p>
         </button>
 
